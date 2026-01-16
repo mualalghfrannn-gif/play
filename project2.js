@@ -3,24 +3,71 @@ let cart = document.querySelector(".cart")
 
 
 function cart_one(){
-     cart.classList.add("active")
+    //  cart.classList.add("active")
+    cart.style.right = "0px"
 }
 function icons(){
-    cart.classList.remove("active")
+    cart.style.right = "-100%"
 }
 
+
+// hpone ==========================
+let hpone = document.querySelector(".hpone") ;
+hpone.onclick = function(){
+Element.href = "tel:+963997591670"
+console.log("hello my hpne")
+}
+
+
+// username ==========================
+
+ let user_clike = document.getElementsByClassName("user_clike");
+    user_clike.onclick = function(){
+        user_form.style.display = "block"
+    }
+      
+    let user_form = document.querySelector(".username");
+
+ function goloooo(){
+    // user_form.classList.toggle("active11")
+    // user_form.classList.remove("remove11")
+    user_form.style.top = "0px"
+
+    console.log("hello")
+ }
+
+ function goloooooo(){
+user_form.style.top = "-100%"
+ }
 
 // search =========================
-let search = document.querySelector("form")
+
+let search = document.querySelector(".headet_form")
 
 function header_search(){
-    search.classList.toggle("active2")
+if(search.style.top == "130px"){
+    search.style.top = "-100%" ;
+    return ;
+}else{
+   search.style.top = "130px";
+    console.log("hello i am serche") ;
 }
-
+ 
+}
 // ul =======================
 let myul = document.querySelector(".nav_ul")
 function nav_ul(){
-myul.classList.toggle("active3")
+
+    if(myul.style.top == "100%"){
+        myul.style.top = "-200%" ;
+        return ;
+    }else{
+        myul.style.top = "100%" ;
+    }
+
+
+
+
 }
 
 
@@ -52,10 +99,13 @@ let scrolll = document.getElementById("scrole")
 
 
 window.onscroll = function(){
-    if(window.scrollY >= 400){
-        scrolll.style.display = "block"
+    if(window.scrollY >= 500){
+        scrolll.style.display = "block" ; 
+
+        hpone.style.display = "block" ;
     }else{
           scrolll.style.display = "none"
+          hpone.style.display = "none" ;
     }
 }
 
@@ -125,3 +175,8 @@ let myarry = new Array(
         }
      
     }
+
+
+//    
+
+
